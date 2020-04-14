@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-weather": {
+    "project-weather": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-weather",
+            "outputPath": "dist/project-weather",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,12 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -65,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-weather:build"
+            "browserTarget": "project-weather:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-weather:build:production"
+              "browserTarget": "project-weather:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-weather:build"
+            "browserTarget": "project-weather:build"
           }
         },
         "test": {
@@ -113,15 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-weather:serve"
+            "devServerTarget": "project-weather:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-weather:serve:production"
+              "devServerTarget": "project-weather:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "angular-weather"
+    }
+  },
+  "defaultProject": "project-weather",
+  "cli": {
+    "analytics": "5a221432-becf-4d5a-bcad-5ebc89e90419"
+  }
 }

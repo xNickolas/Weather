@@ -3,16 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchWeatherComponent } from './search-weather/search-weather.component';
+import { TimeDisplayComponent } from './time-display/time-display.component';
+import { SearchComponent } from './search/search.component';
+
+//services
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchWeatherComponent
+    TimeDisplayComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
