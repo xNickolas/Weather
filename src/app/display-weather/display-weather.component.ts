@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayWeatherComponent implements OnInit {
 
+  constructor() { }
+
   condition: string = "Clear"
   temp: number = 12
   hum: number = 75
@@ -17,7 +19,7 @@ export class DisplayWeatherComponent implements OnInit {
 
 
 
-  constructor() { }
+  
 
   ngOnInit(): void {
   }

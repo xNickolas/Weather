@@ -1,7 +1,17 @@
-<nav class="nav-menu">
-	<div class="container">
-        <input type="text" placeholder="Search...">
-        <div class="search"></div>
-      </div>
-</nav>
 
+  <div class="cover">
+    <div class="flex-form">
+      <input type="search" placeholder="Search..." (change)="saveValue($event)">
+      <input type="submit" value="Search" (click)="clickButton()">
+    </div>
+  </div>
+
+
+  
+<!-- <form>
+<input (change)="saveValue($event)" type="text">
+
+</form> -->
+
+<!-- <input type="text" for="btn" placeholder="Search" id="id" (change)="saveValue($event)">
+<button type="submit" id="btn" (click)="clickButton()">Search</button> -->
