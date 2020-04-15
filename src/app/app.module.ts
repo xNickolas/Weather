@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TimeDisplayComponent } from './time-display/time-display.component';
-import { SearchComponent } from './search/search.component';
+import { SearchWeatherComponent } from './search-weather/search-weather.component';
 
 //services
 import {  HttpClientModule } from '@angular/common/http';
+import { DisplayWeatherComponent } from './display-weather/display-weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimeDisplayComponent,
-    SearchComponent
+    SearchWeatherComponent,
+    DisplayWeatherComponent
   ],
   imports: [
     BrowserModule,

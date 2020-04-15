@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimeDisplayComponent } from './time-display.component';
+import { DisplayWeatherComponent } from './display-weather.component';
 
-describe('TimeDisplayComponent', () => {
-  let component: TimeDisplayComponent;
-  let fixture: ComponentFixture<TimeDisplayComponent>;
+describe('DisplayWeatherComponent', () => {
+  let component: DisplayWeatherComponent;
+  let fixture: ComponentFixture<DisplayWeatherComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimeDisplayComponent ]
+      declarations: [ DisplayWeatherComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TimeDisplayComponent);
+    fixture = TestBed.createComponent(DisplayWeatherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
