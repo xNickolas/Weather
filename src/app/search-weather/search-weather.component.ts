@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetdataService } from '../getdata.service';
+import { ItemData } from '../model.interface';
+
 
 @Component({
   selector: 'app-search-weather',
@@ -9,15 +11,18 @@ import { GetdataService } from '../getdata.service';
 export class SearchWeatherComponent implements OnInit {
 
   guardaData: any;
-  temperature: any;
-  city: any;
-  humidity:any
-  wind:any
+  // temperature: any;
+  // city: any;
+  // humidity:any
+  // wind:any
+  // description:any
   valor: string;
+  infoApi
+  weatherData
+  model:ItemData[]
+  
 
   constructor(private api: GetdataService) { }
-
-  ngOnInit() { }
 
   saveValue(event) {
     this.valor = String(event.target.value);    
@@ -26,35 +31,35 @@ export class SearchWeatherComponent implements OnInit {
   clickButton() {
     this.api.getData(this.valor).subscribe(
       (resp) => {
-        this.guardaData = new Object(resp)
-        this.temperature = this.guardaData.data[0].temp;
-        this.city = this.guardaData.data[0].city_name;
-        this.humidity = this.guardaData.data[0].rh;
-        this.wind = this.guardaData.data[0].wind_spd;
-        console.log(`Cidade: ${this.city} e Temp: ${this.temperature} e Umidade: ${this.humidity} e Vento: ${this.wind}`);
-      });
+        this.infoApi = resp
+        let resposta = this.infoApi.data[0]
+        // this.city = this.guardaData.data[0].city_name;
+        // this.temperature = this.guardaData.data[0].temp;
+        // this.humidity = this.guardaData.data[0].rh;
+        // this.wind = this.guardaData.data[0].wind_spd;
+        // this.description = this.guardaData.data[0].weather.description;
+        this.weatherData = new ItemData(resposta.city_name, resposta.temp, resposta.rh, 
+          resposta.wind_spd, resposta.weather.description)
+          
+          console.log(this.weatherData)
+        });
   }
   
+  ngOnInit() { 
+    this.api.getData("São Paulo").subscribe(
+      (resp) => {
+        this.infoApi = resp
+        let resposta = this.infoApi.data[0]
+        // this.city = this.guardaData.data[0].city_name;
+        // this.temperature = this.guardaData.data[0].temp;
+        // this.humidity = this.guardaData.data[0].rh;
+        // this.wind = this.guardaData.data[0].wind_spd;
+        // this.description = this.guardaData.data[0].weather.description;
+        this.weatherData = new ItemData(resposta.city_name, resposta.temp, resposta.rh, 
+          resposta.wind_spd, resposta.weather.description)
+          
+  })
 }
 
-      // this.city.getData().subscribe((data) => {
-    //   console.log(data);
-    // });
-
-    // getApi(event) {
-    //     this.api.getData(this.valor).subscribe(
-    //       (resp) => {
-    //         this.guardaData = new Object(resp)
-    //         this.clima = this.guardaData.data[0];
-    //         this.temperature = this.clima.temp;
-    //         this.city = this.clima.timezone;
-    //         console.log(this.temperature + this.city);
-
-    //       });
-    //---------------------
-    // this.weatherSearchForm = this.formBuilder.group({
-    //   data: ['']
-    // });
-
-
+}
 

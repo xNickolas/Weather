@@ -1,9 +1,9 @@
 <header> 
-    <app-search-weather></app-search-weather>
+    <app-search-weather #search></app-search-weather>
 </header>
 
 <div class="main-background">
-    <app-display-weather></app-display-weather>
+    <app-display-weather [weatherDatas]="search.weatherData"></app-display-weather>
     
 </div>
 

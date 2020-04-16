@@ -8,27 +8,27 @@
             <div class="today-content-weather">
                 <div class="temp-condition-content">
                     <img class="icon-sunny" src="../../assets/icons/icon-clear.png">
-                    <span class="temperature">{{temp}}°</span>
+                    <span class="temperature">{{weatherDatas.temperature}}°</span>
                 </div>
 
-                <span class="weather-condition">{{condition}}</span>
+                <span class="weather-condition">{{weatherDatas.description}}</span>
                 
                 <div class="hum-wind-content">
                     <div class="hum-content">
                       <span class="hum-text">humidity</span>
-                      <span class="hum-value-text">{{hum}} %</span>
+                      <span class="hum-value-text">{{weatherDatas.humidity}} %</span>
                     </div>
                     <div class="hum-wind-separator">&nbsp;</div>
                     <div class="wind-content">
                       <span class="wind-text">wind</span>
-                      <span class="wind-value-text">{{wind}} K/M</span>
+                      <span class="wind-value-text">{{weatherDatas.wind |  number:'1.0-0'}} K/M</span>
                     </div>
                 </div>
                
             </div>
             <div class="state-name-content">
                 <div class="state-name">
-                  <span class="state-name-text">{{state}}</span>
+                  <span class="state-name-text">{{weatherDatas.city}}</span>
                 </div>
             </div>
         </div>  

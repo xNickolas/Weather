@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ItemData } from './model.interface';
+
+
 
 
 
@@ -11,7 +14,7 @@ export class GetdataService {
   private apiUrl = "https://api.weatherbit.io/v2.0/current"
 
   private cityComplement = "?city="
-  private keyComplement = "&key=cbf7ff9ea59249408e922b1d8762773d"
+  private keyComplement = "&key=cbf7ff9ea59249408e922b1d8762773d&lang=pt"
 
   constructor(private http: HttpClient) { }
 

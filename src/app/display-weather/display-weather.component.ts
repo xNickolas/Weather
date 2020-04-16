@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GetdataService } from '../getdata.service';
+import { ItemData } from '../model.interface'
+
 
 @Component({
   selector: 'app-display-weather',
@@ -7,21 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayWeatherComponent implements OnInit {
 
-  constructor() { }
+ constructor(private weatherData: GetdataService) { }
 
-  condition: string = "Clear"
-  temp: number = 12
-  hum: number = 75
-  wind: number = 7
-  state: string = "São Paulo"
+  @Input() weatherDatas
 
-  day: string = "Mon"
-
-
-
-  
-
-  ngOnInit(): void {
-  }
+   ngOnInit(): void {
+    }
 
 }
