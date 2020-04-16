@@ -13,7 +13,7 @@
     position: relative;
     object-fit: cover;
     margin-left: 220px;
-    margin-top: 60px;
+    margin-top: 30px;
     box-shadow: 0px -3px 9px #666666;
     -webkit-box-shadow: 0px -3px 9px #666666;
     -moz-box-shadow: 0px -3px 9px #666666;
@@ -21,6 +21,7 @@
 
 .header-content {
     position: absolute;
+    margin-top: -40px;
     z-index: 2;
     color: white;
     top: 3rem;
@@ -42,7 +43,7 @@
     grid-gap: 2rem;
     margin-top: 50px;
     margin-left: 50px;
-    font-family: sans-serif;
+    font-family: SegoeUI, Segoe UI, sans-serif;
 }
   
 .temp-condition-content {
@@ -151,6 +152,8 @@ DAYS
     width: 70%;
     height: 280px;
     border-radius: 0 0 1rem 1rem;
+    position: relative;
+    object-fit: cover;
     margin-left: 220px;
     margin-top: -5px;
     box-shadow: 0px 7px 9px #666666;
