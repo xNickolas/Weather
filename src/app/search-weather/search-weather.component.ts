@@ -9,9 +9,10 @@ import { GetdataService } from '../getdata.service';
 export class SearchWeatherComponent implements OnInit {
 
   guardaData: any;
-  clima: any;
   temperature: any;
   city: any;
+  humidity:any
+  wind:any
   valor: string;
 
   constructor(private api: GetdataService) { }
@@ -26,10 +27,11 @@ export class SearchWeatherComponent implements OnInit {
     this.api.getData(this.valor).subscribe(
       (resp) => {
         this.guardaData = new Object(resp)
-        this.clima = this.guardaData.data[0];
-        this.temperature = this.clima.temp;
-        this.city = this.clima.timezone;
-        console.log(this.temperature + this.city);
+        this.temperature = this.guardaData.data[0].temp;
+        this.city = this.guardaData.data[0].city_name;
+        this.humidity = this.guardaData.data[0].rh;
+        this.wind = this.guardaData.data[0].wind_spd;
+        console.log(`Cidade: ${this.city} e Temp: ${this.temperature} e Umidade: ${this.humidity} e Vento: ${this.wind}`);
       });
   }
   
