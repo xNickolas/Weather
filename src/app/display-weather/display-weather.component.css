@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url(//db.onlinewebfonts.com/c/749ba57b431f4eba8b31eb57d5aab83e?family=Brandon+Text+Medium);
+
+
+
+/*
+=========================
+BodyTop
+=========================
+*/
+
 
 .card-header-gradient {
     width: 100%;
@@ -6,6 +17,11 @@
 }
 
 
+/*
+=========================
+First background and Cities background.
+=========================
+*/
 .card-illustration {
     width: 70%;
     height: 350px;
@@ -19,11 +35,26 @@
     -moz-box-shadow: 0px -3px 9px #666666;
 }
 
+.cities-illustration {
+    width: 70%;
+    height: 350px;
+    border-radius: 1rem 1rem 0 0;
+    position: relative;
+    margin-left: 220px;
+    margin-top: 70px;
+}
+
+
+/*
+=========================
+Content inside the div 
+=========================
+*/
 .header-content {
     position: absolute;
     margin-top: -40px;
     z-index: 2;
-    color: white;
+    color: rgb(255, 255, 255);
     top: 3rem;
     display: grid;
     grid-template-rows: 1fr;
@@ -31,6 +62,7 @@
     width: 100%;
   
 }
+
 
 .today-content-weather {
     align-self: center;
@@ -43,9 +75,10 @@
     grid-gap: 2rem;
     margin-top: 50px;
     margin-left: 50px;
-    font-family: SegoeUI, Segoe UI, sans-serif;
+    font-family: "Brandon Text Medium";
 }
-  
+ 
+
 .temp-condition-content {
     display: flex;
     align-items: center;
@@ -53,29 +86,33 @@
     /* display: flex;
     justify-content: center;
     flex-flow: column; */
-    margin-top: 10px;
-    margin-left: 250px;
+    margin-top: -50px;
+    margin-left: 80px;
 }
 
-.icon-sunny {
+
+/* .icon-sunny {
     width: 10%;
     margin-right: 30px;
-}
+} */
+
 
 .temperature {
     font-size: 6rem;
     letter-spacing: 0.40rem;
+    font-weight: normal;
 }
-  
+ 
+
 .weather-condition{
     letter-spacing: 0.5rem;
     font-size: 1.15rem;
     text-transform: uppercase;
-    margin-top: 0.25rem;
-    font-family: sans-serif;
-    margin-left: 25px;
-    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 27px;
+    margin-top: 30px;
 }
+
 
 .hum-wind-content {
     display: flex;
@@ -83,19 +120,23 @@
     margin-left: -0rem;
 }
 
+
 .hum-wind-separator {
     margin: 0 2rem;
     width: 2px;
     height: 2.5rem;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
+
 
 .hum-content, .wind-content {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    margin-top: -30px;
 }
+
 
 .hum-text, .wind-text {
     text-transform: uppercase;
@@ -104,16 +145,18 @@
     margin-bottom: 1rem;
 }
 
+
 .state-name-content {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 25%;
-    margin-top: 50px;
+    margin-top: -50px;
     margin-right: 80px;
-    font-family: sans-serif;    
+    font-family: "Brandon Text Medium";
 }
-  
+ 
+
 .state-name {
     background: transparent;
     border-radius: 5px;
@@ -130,7 +173,7 @@
 
 /*
 =============
-DAYS 
+BodyBottom
 =============
 */
 
@@ -155,10 +198,17 @@ DAYS
     position: relative;
     object-fit: cover;
     margin-left: 220px;
-    margin-top: -5px;
+    margin-top: -44px;
     box-shadow: 0px 7px 9px #666666;
     -webkit-box-shadow: 0px 7px 9px #666666;
     -moz-box-shadow: 0px 7px 9px #666666;
+}
+
+.day-wheater {
+    text-align: center;
+    padding: 0px;
+    margin-top: -50px;
+    position: relative;
 }
 
 

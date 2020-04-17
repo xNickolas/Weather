@@ -39,7 +39,7 @@ export class SearchWeatherComponent implements OnInit {
         // this.wind = this.guardaData.data[0].wind_spd;
         // this.description = this.guardaData.data[0].weather.description;
         this.weatherData = new ItemData(resposta.city_name, resposta.temp, resposta.rh, 
-          resposta.wind_spd, resposta.weather.description)
+          resposta.wind_spd, resposta.weather.description, resposta.country_code)
           
           console.log(this.weatherData)
         });
@@ -56,7 +56,7 @@ export class SearchWeatherComponent implements OnInit {
         // this.wind = this.guardaData.data[0].wind_spd;
         // this.description = this.guardaData.data[0].weather.description;
         this.weatherData = new ItemData(resposta.city_name, resposta.temp, resposta.rh, 
-          resposta.wind_spd, resposta.weather.description)
+          resposta.wind_spd, resposta.weather.description, resposta.country_code)
           
   })
 }

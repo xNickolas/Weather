@@ -1,40 +1,40 @@
+<section class="card-header-gradient">
+    <img style="position:absolute; z-index: 1;" class="card-illustration" src="../../assets/cities/default.svg">
+    <img style="z-index: 2;" class="cities-illustration" src="../../assets/cities/world-cities2.svg">
 
-
-
-    <section class="card-header-gradient">
-        <img class="card-illustration" src="../../assets/cities/default.svg">
-
-        <div class="header-content">
-            <div class="today-content-weather">
-                <div class="temp-condition-content">
-                    <img class="icon-sunny" src="../../assets/icons/icon-clear.png">
-                    <span class="temperature">{{weatherDatas.temperature}}°</span>
-                </div>
-
-                <span class="weather-condition">{{weatherDatas.description}}</span>
-                
-                <div class="hum-wind-content">
-                    <div class="hum-content">
-                      <span class="hum-text">humidity</span>
-                      <span class="hum-value-text">{{weatherDatas.humidity}} %</span>
-                    </div>
-                    <div class="hum-wind-separator">&nbsp;</div>
-                    <div class="wind-content">
-                      <span class="wind-text">wind</span>
-                      <span class="wind-value-text">{{weatherDatas.wind |  number:'1.0-0'}} K/M</span>
-                    </div>
-                </div>
-               
+    <div class="header-content">
+        <div class="today-content-weather">
+            <div class="temp-condition-content">
+                <span class="temperature">{{weatherDatas.temperature}}°</span>
             </div>
-            <div class="state-name-content">
-                <div class="state-name">
-                  <span class="state-name-text">{{weatherDatas.city}}</span>
+
+            <span class="weather-condition">{{weatherDatas.description}}</span>
+
+            <div class="hum-wind-content">
+                <div class="hum-content">
+                    <span class="hum-text">humidity</span>
+                    <span class="hum-value-text">{{weatherDatas.humidity}} %</span>
+                </div>
+                <div class="hum-wind-separator">&nbsp;</div>
+                <div class="wind-content">
+                    <span class="wind-text">wind</span>
+                    <span class="wind-value-text">{{weatherDatas.wind |  number:'1.0-0'}} K/M</span>
                 </div>
             </div>
-        </div>  
-    </section>
-    <main class="body-content__wrapper">
-        <section class="forecast__container">
-            <img class="white-bg" src="../../assets/cities/white-bg.svg">
-        </section>
-    </main>
+
+        </div>
+        <div class="state-name-content">
+            <div class="state-name">
+                <span class="state-name-text">{{weatherDatas.city}}-{{weatherDatas.country}}</span>
+            </div>
+        </div>
+    </div>
+</section>
+<main class="body-content__wrapper">
+    <img class="white-bg" src="../../assets/cities/white-bg.svg">
+</main>
+<!-- <section class="forecast__container">
+    <div class="day-weather">
+        <span class="day-name_text">{{day}}</span>
+    </div>
+</section> -->

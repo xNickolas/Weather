@@ -12,6 +12,8 @@ export class DisplayWeatherComponent implements OnInit {
 
  constructor(private weatherData: GetdataService) { }
 
+ day: string = "Monday"
+
   @Input() weatherDatas
 
    ngOnInit(): void {
